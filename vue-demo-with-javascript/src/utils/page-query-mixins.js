@@ -50,6 +50,8 @@ function copyObjectKeepFieldType (objectFrom, objectTo) {
   })
 }
 
+import pagination from "../components/pagination"
+
 export default {
   data () {
     return {
@@ -61,6 +63,7 @@ export default {
       pageTotal: 0
     }
   },
+  components: {pagination},
   methods: {
     // 通常在列表查询成功时调用此方法,用于将接口返回的分页数据同步到data和url上
     refreshQueryParams (pageQueryResponse) {
